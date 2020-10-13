@@ -1,0 +1,4 @@
+# ignoring builded site
+site/
+
+.idea/
