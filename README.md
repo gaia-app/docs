@@ -22,5 +22,5 @@ mkdocs serve
 ## publishing the docs locally
 
 ```bash
-mkdocs gh-deploy
+mkdocs gh-deploy --force
 ```
