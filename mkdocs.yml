@@ -1,1 +1,5 @@
-site_name: My Docs
+site_name: Gaia
+site_description: Gaia Documentation
+site_author: gaia-app.io
+
+docs_dir: 'content'
