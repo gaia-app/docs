@@ -11,3 +11,10 @@ theme:
     primary: white
   logo: assets/gaia_32.png
   favicon: assets/favicon.ico
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gaia-app/gaia
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/jnURE6h
