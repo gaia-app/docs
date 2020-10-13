@@ -1,4 +1,4 @@
-site_name: Gaia
+site_name: Gaia Documentation
 site_description: Gaia Documentation
 site_author: gaia-app.io
 
@@ -7,3 +7,7 @@ docs_dir: content
 theme:
   name: material
   custom_dir: overrides
+  palette:
+    primary: white
+  logo: assets/gaia_32.png
+  favicon: assets/favicon.ico
