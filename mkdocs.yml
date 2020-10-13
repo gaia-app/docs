@@ -3,3 +3,6 @@ site_description: Gaia Documentation
 site_author: gaia-app.io
 
 docs_dir: 'content'
+
+theme:
+  name: 'material'
