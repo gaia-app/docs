@@ -19,3 +19,7 @@ extra:
       link: https://github.com/gaia-app/gaia
     - icon: fontawesome/brands/discord
       link: https://discord.gg/jnURE6h
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
