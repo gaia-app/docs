@@ -1,0 +1,29 @@
+name: Build & Publish documentation
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    name: Build & Publish documentation
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout Master
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material
+
+      - name: Publish
+        run: |
+          mkdocs gh-deploy --force
