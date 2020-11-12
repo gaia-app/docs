@@ -4,22 +4,32 @@
 
 Gaia needs : 
 
- * a docker daemon (used to run Terraform itself)
+ * a Docker daemon (used to run Terraform itself)
  * a MongoDb database (to store its data)
 
-## Getting started with docker
+## Getting started with source-code & Docker
 
-### Using source-code and docker-compose
+### Using docker-compose
 
-Clone the Gaia repository : 
+The Gaia source code contains several docker-compose files to help users getting started quickly.
+
+#### Start Gaia & a MongoDb database
+
+Clone the Gaia repository & run docker-compose: 
 
 ```bash
 git clone git@github.com:gaia-app/gaia.git
+cd gaia
+docker-compose up -d
 ```
 
-Run docker-compose :
+#### Start Gaia-Runner
+
+Clone the runner repository & run docker-compose: 
 
 ```bash
+git clone git@github.com:gaia-app/runner.git
+cd runner
 docker-compose up -d
 ```
 
