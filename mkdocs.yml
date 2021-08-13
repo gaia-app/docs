@@ -12,6 +12,21 @@ theme:
   logo: assets/gaia_32.png
   favicon: assets/favicon.ico
   font: false
+  features:
+    - navigation.indexes
+
+nav:
+  - index.md
+  - Getting started:
+    - getting-started/concepts.md
+    - getting-started/quick-start.md
+  - Configuration:
+    - configuration/database-configuration.md
+    - configuration/runner-configuration.md
+  - Credentials:
+    - AWS: credentials/aws.md
+    - GCP: credentials/gcp.md
+    - AzureRM: credentials/azurerm.md
 
 extra:
   social:
