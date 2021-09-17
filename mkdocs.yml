@@ -23,6 +23,7 @@ nav:
   - Configuration:
     - configuration/database-configuration.md
     - configuration/runner-configuration.md
+    - configuration/github-integration.md
   - Credentials:
     - AWS: credentials/aws.md
     - GCP: credentials/gcp.md
@@ -39,3 +40,5 @@ extra:
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
+  - attr_list
+  - admonition
