@@ -7,6 +7,32 @@ Gaia needs :
  * a Docker daemon (used to run Terraform itself)
  * a MongoDb database (to store its data)
 
+## Getting started with docker-compose
+
+Create the following `docker-compose.yml` file
+
+```yaml
+version: "3.9"
+services:
+  gaia:
+    image: "gaiaapp/gaia"
+    ports: 
+      - "8080:8080"
+    environment:
+      - "GAIA_MONGODB_URI=mongodb://mongo/gaia"
+      - "GAIA_RUNNER_API_PASSWORD=123456"
+  runner:
+    image: "gaiaapp/runner"
+    environment:
+      - "GAIA_URL=http://gaia:8080"
+      - "GAIA_RUNNER_API_PASSWORD=123456"
+  mongo:
+    image: "mongo:4.4"
+```
+
+Then, run `docker-compose up -d`.
+When Gaia is started, open https://localhost:8080 on your browser.
+
 ## Getting started with source-code & Docker
 
 ### Using docker-compose
