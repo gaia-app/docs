@@ -25,6 +25,7 @@ nav:
     - configuration/database-configuration.md
     - configuration/runner-configuration.md
     - configuration/github-integration.md
+    - configuration/gitlab-integration.md
   - Credentials:
     - AWS: credentials/aws.md
     - GCP: credentials/gcp.md
