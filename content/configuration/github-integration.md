@@ -33,21 +33,13 @@ Take note of the _Client ID_, generate a _Client secret_, and take note of it to
 
 ### With docker-compose
 
-Edit the `application-github.properties` file in the `src/main/resources` directory to add your _Client ID_ and _Client Secret_ for the Github registration.
-
-```properties
-spring.security.oauth2.client.registration.github.client-id=<CLIENT_ID>
-spring.security.oauth2.client.registration.github.client-secret=<CLIENT_SECRET>
-```
-
-Edit your `docker-compose.yml` file to activate the `github` Spring profile:
+Edit your `docker-compose.yml` file to activate the `github` Spring profile, and to add your _Client ID_ and _Client Secret_ for the Github registration :
 
 ```yaml
 version: "3"
 services:
   gaia:
-    build: .
-    image: gaia
+    image: gaiaapp/gaia
     ports:
       - '8080:8080'
     environment:
@@ -55,6 +47,8 @@ services:
       - "GAIA_EXTERNAL_URL=http://172.17.0.1:8080"
       - "GAIA_RUNNER_API_PASSWORD=123456"
       - "SPRING_PROFILES_ACTIVE=github"
+      - "SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GITHUB_CLIENT_ID=<CLIENT_ID>"
+      - "SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GITHUB_CLIENT_SECRET=<CLIENT_SECRET>"
   mongo:
     build:
       context: .
