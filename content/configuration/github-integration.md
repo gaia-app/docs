@@ -49,11 +49,6 @@ services:
       - "SPRING_PROFILES_ACTIVE=github"
       - "SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GITHUB_CLIENT_ID=<CLIENT_ID>"
       - "SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GITHUB_CLIENT_SECRET=<CLIENT_SECRET>"
-  mongo:
-    build:
-      context: .
-      dockerfile: ./Dockerfile-db
-    image: gaia-db
 ```
 
 ## Login with Github

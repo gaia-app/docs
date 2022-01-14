@@ -57,11 +57,6 @@ services:
       - "SPRING_PROFILES_ACTIVE=gitlab"
       - "SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GITLAB_CLIENT_ID=<APPLICATION_ID>"
       - "SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GITLAB_CLIENT_SECRET=<SECRET>"
-  mongo:
-    build:
-      context: .
-      dockerfile: ./Dockerfile-db
-    image: gaia-db
 ```
 
 ## Login with Gitlab
