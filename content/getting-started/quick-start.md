@@ -26,6 +26,8 @@ services:
     environment:
       - "GAIA_URL=http://gaia:8080"
       - "GAIA_RUNNER_API_PASSWORD=123456"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
   mongo:
     image: "mongo:4.4"
 ```
