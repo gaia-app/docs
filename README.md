@@ -15,8 +15,16 @@ pip3 install mkdocs-material
 
 ## serving the documentation locally
 
-```bash
+### with mkdocs
+
+```shell
 mkdocs serve
+```
+
+### with docker
+
+```shell
+docker run --rm -it -p 8000:8000 -v .:/docs squidfunk/mkdocs-material
 ```
 
 ## publishing the docs locally
