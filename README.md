@@ -24,7 +24,7 @@ mkdocs serve
 ### with docker
 
 ```shell
-docker run --rm -it -p 8000:8000 -v .:/docs squidfunk/mkdocs-material
+docker run --rm -it -p 8000:8000 -v $(pwd):/docs squidfunk/mkdocs-material
 ```
 
 ## publishing the docs locally
