@@ -33,7 +33,7 @@ services:
 ```
 
 Then, run `docker-compose up -d`.
-When Gaia is started, open https://localhost:8080 on your browser.
+When Gaia is started, open http://localhost:8080 on your browser.
 
 ## Getting started with source-code & Docker
 
