@@ -7,7 +7,11 @@ Gaia needs :
  * a Docker daemon (used to run Terraform itself)
  * a MongoDb database (to store its data)
 
-## Getting started with docker-compose
+## Getting started with docker-compose & pre-build images
+
+!!! Prerequisites
+* `docker` version 20.10.14 minimum
+* `docker-compose` version 1.29 minimum
 
 Create the following `docker-compose.yml` file
 
@@ -37,6 +41,10 @@ When Gaia is started, open http://localhost:8080 on your browser.
 
 ## Getting started with source-code & Docker
 
+!!! Prerequisites
+    * `docker` version 20.10.14 minimum
+    * `docker-compose` version 1.29 minimum
+
 ### Using docker-compose
 
 The Gaia source code contains several docker-compose files to help users getting started quickly.
@@ -60,6 +68,35 @@ git clone git@github.com:gaia-app/runner.git
 cd runner
 docker-compose up -d
 ```
+
+## Getting started with source code, Maven & Java
+
+!!! Prerequisites
+    * Java 17
+    * Maven version 3.8+
+
+### Build Gaia with maven
+
+Clone the Gaia repository, & run `mvn package` to build and executable jar of Gaia:
+
+```bash
+git clone git@github.com:gaia-app/gaia.git
+cd gaia
+mvn package -DskipTests
+```
+
+An executable jar will be build in the `target` directory.
+
+### Run Gaia as a jar
+
+Run the executable jar with the following command:
+
+```bash
+java -jar target/gaia-2.3.0.jar
+```
+
+To configure the database, see [database-configuration](/configuration/database-configuration/#jar)
+
 
 ## Login
 
