@@ -4,14 +4,46 @@
 
 Gaia needs : 
 
- * a Docker daemon (used to run Terraform itself)
+ * a Docker daemon (used to run Terraform itself), or a Kubernetes cluster
  * a MongoDb database (to store its data)
+
+## Getting started with Kubernetes & Helm
+
+!!! Prerequisites
+    * Access to a Kubernetes cluster (version 1.22 minimum) 
+    * `helm` version 3.8 minimum
+    * `kubectl` version 1.22 minimum
+
+Create a namespace in your cluster for Gaia:
+
+```shell
+kubectl create namespace gaia
+```
+
+Install the Helm chart for Gaia in the created namespace using the following command:
+
+```shell
+helm install gaia https://github.com/gaia-app/chart/archive/refs/tags/v0.1.1.tar.gz --namespace gaia
+```
+
+When gaia is started, get the URL of the service by running:
+
+```shell
+kubectl get svc --namespace gaia
+```
+The expected output is:
+```text
+NAME            TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+gaia            LoadBalancer   <cluster-ip>     <ext-ip>      80:<port>/TCP  6m39s
+gaia-database   ClusterIP      <cluster-ip>     <none>        27017/TCP      6m39s
+```
+Take note of the `<ext-ip>` and the `<port>` and open your browser to `http://<ext-ip>:<port>`
 
 ## Getting started with docker-compose & pre-build images
 
 !!! Prerequisites
-* `docker` version 20.10.14 minimum
-* `docker-compose` version 1.29 minimum
+    * `docker` version 20.10.14 minimum
+    * `docker-compose` version 1.29 minimum
 
 Create the following `docker-compose.yml` file
 
