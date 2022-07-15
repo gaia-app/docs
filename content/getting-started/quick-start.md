@@ -25,6 +25,7 @@ services:
     environment:
       - "GAIA_MONGODB_URI=mongodb://mongo/gaia"
       - "GAIA_RUNNER_API_PASSWORD=123456"
+      - "GAIA_EXTERNAL_URL=http://gaia:8080"
   runner:
     image: "gaiaapp/runner"
     environment:
