@@ -23,7 +23,7 @@ kubectl create namespace gaia
 Install the Helm chart for Gaia in the created namespace using the following command:
 
 ```shell
-helm install gaia https://github.com/gaia-app/chart/archive/refs/tags/v0.1.1.tar.gz --namespace gaia
+helm install gaia https://github.com/gaia-app/chart/archive/refs/tags/v0.1.2.tar.gz --namespace gaia
 ```
 
 When gaia is started, get the URL of the service by running:
